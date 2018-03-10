@@ -1,0 +1,390 @@
+<html>
+<head>
+	<title>CSEmail Package : Demo - CoolServlets.com</title>
+</head>
+
+<BODY bgcolor="#ffffff" link="#000099" vlink="#000099" alink="#ff0000">
+
+<!-- Begin header -->
+<table cellpadding=0 cellspacing=0 width="100%" border=0>
+<tr>
+	<td align=left width="1%"><img src="http://www.coolservlets.com/images/header_top.gif" width=600 height=15 border=0></td>
+	<td bgcolor="#ffffff" width="99%"><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=15 border=0></td>
+</tr>
+<tr>
+	<td align=left><img src="http://www.coolservlets.com/images/header_middle.gif" width=600 height=54 border=0></td>
+	<td bgcolor="#0066cc">
+		<table cellpadding=0 cellspacing=0 border=0 width="100%">
+			<tr><td bgcolor="#000000" width="100%"><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=1 border=0></td></tr>
+			<tr><td align=right><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=53 border=0></td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td align=left><img src="http://www.coolservlets.com/images/header_bottom.gif" width=600 height=21 border=0 usemap="#header_bottom"></td>
+	<td bgcolor="#999999">
+		<table cellpadding=0 cellspacing=0 border=0 width="100%">
+			<tr><td bgcolor="#000000"><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=1 border=0></td></tr>
+			<tr><td><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=17 border=0></td></tr>
+			<tr><td bgcolor="#000000"><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=1 border=0></td></tr>
+			<tr><td bgcolor="#ffffff"><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=2 border=0></td></tr>
+		</table>
+	</td>
+</tr>
+</table>
+<map name="header_bottom">
+<area shape="rect" coords="167,0,221,18" href="http://www.coolservlets.com/index.html">
+<area shape="rect" coords="221,1,319,18" href="http://www.coolservlets.com/about.html">
+<area shape="rect" coords="320,0,434,18" href="http://www.coolservlets.com/servlets.html">
+<area shape="rect" coords="436,1,497,18" href="http://www.coolservlets.com/support.html">
+<area shape="rect" coords="499,0,599,18" href="http://www.coolservlets.com/developer/index.html">
+<area shape="default" nohref>
+</map>
+<!-- End Header -->
+
+<br>
+
+<!-- Begin AD -->
+<center>
+<SERVLET CODE="CSAdServer">
+<PARAM NAME="getAd" VALUE="true">
+</SERVLET>
+</center>
+<!-- End AD -->
+
+<p>
+
+<font face="arial,helvetica,sans-serif" size=4>
+<a href="index.html">CSEmail Package</a> : Demo
+</font>
+
+<hr size=0>
+<br>
+
+Two working Java programs (one application, one servlet) are included in the 
+CS Email Package distribution (see the <code><font color="#006600">/demo</font></code> directory). 
+Since these demos require some configuration
+on the user's part (ie, setting the SMTP server) their functionality 
+is not viewable on this page. However, on this page, you can view the source
+code of the two programs.
+
+<p>
+
+<center>
+<table cellpadding=3 cellspacing=0 border=1 width="60%">
+<td width="50%" align=center>
+	<code><a href="#exampleapp.java">ExampleApp.java</a></code>
+</td>
+<td width="50%" align=center>
+	<code><a href="#exampleservlet.java">ExampleServlet.java</a></code>
+</td>
+</table>
+<br>
+<font size="-1"><i>(To view the non-highlighted source files, see the /demo/ directory in the
+distribution.)</i></font>
+</center>
+
+<p>
+
+<table border=1 cellpadding=3 cellspacing=0>
+<tr bgcolor="#dddddd">
+	<td><code><a name="#exampleapp.java">ExampleApp.java</a></code></td>
+</tr>
+</table>
+<table border=1 cellpadding=3 cellspacing=0>
+<tr>
+	<td>
+<pre>
+<font color="#aa0000"><i>/**
+ *  ExampleApp.java
+ *
+ *  CS Email Package, Version 1.2
+ *
+ *  September 27, 1999
+ *
+ *  Copyright (C) 1999  Bill Lynch, CoolServlets.com
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU Library General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *  http://www.coolservlets.com/LGPL.html
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Library General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Library General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */</font></i>
+
+<b>import</b> java.io.*;
+<b>import</b> com.coolservlets.email.*;
+
+<font color="#aa0000"><i>/**
+ *  This is a fully functional demo of the Email Package. To run this
+ *  demo, you need to do a few things:
+ *
+ *  (1) Put the email classes in the right place.
+ *
+ *      yourCurrentDirectory/ ExampleApp.java
+ *                          / com /
+ *                                / coolservlets /
+ *                                               / email /
+ *                                                       / &lt;email classes&gt;
+ *      where &lt;email classes&gt; are the files included in the distribution.
+ *
+ *  (2) Find out what SMTP port you have access to. Once you do that,
+ *      be sure to note the SMTP host name (ie, smtp.coolservlets.com) and
+ *      port number (ie, 25). (Note, that's not our real SMTP server so
+ *      don't even try it... :) ).
+ *
+ *  (3) Change the private variables in the ExampleApp class. Without this
+ *      change, this demo will compile but you won't send anything! :)
+ *
+ */</font></i>
+<b>public</b> <b>class</b> ExampleApp {
+
+    <b>private</b> String YOUR_NAME       = <font color="#000099">""</font>;    <font color="#aa0000"><i>/* ie, "Joe Bloe"                           */</font></i>
+    <b>private</b> String YOUR_EMAIL      = <font color="#000099">""</font>;    <font color="#aa0000"><i>/* ie, "jbloe@joesDomain.com"               */</font></i>
+    <b>private</b> String RECIPIENT_NAME  = <font color="#000099">""</font>;    <font color="#aa0000"><i>/* ie, "Jane Doe"                           */</font></i>
+    <b>private</b> String RECIPIENT_EMAIL = <font color="#000099">""</font>;    <font color="#aa0000"><i>/* ie, "jdoe@anotherDomain.com"             */</font></i>
+    <b>private</b> String EMAIL_SUBJECT   = <font color="#000099">""</font>;    <font color="#aa0000"><i>/* ie, "Hi Jane!"                           */</font></i>
+    <b>private</b> String EMAIL_TEXT      = <font color="#000099">""</font>;    <font color="#aa0000"><i>/* ie, "Hope all is well... later! -- Joe"  */</font></i>
+    <b>private</b> String SMTP_HOST       = <font color="#000099">""</font>;    <font color="#aa0000"><i>/* Joe's smtp server: smtp.joesDomain.com   */</font></i>
+    <b>private</b> <b>int</b>    SMTP_PORT       = 25;    <font color="#aa0000"><i>/* Default is 25                            */</font></i>
+
+    <b>public</b> ExampleApp() {
+
+        <font color="#aa0000"><i>// Create the message and transport objects:</font></i>
+        Message msg  = <b>new</b> Message();
+        Transport tr = <b>new</b> Transport( SMTP_HOST, SMTP_PORT );
+
+        <font color="#aa0000"><i>// Set the FROM, TO, SUBJECT and text of the email message</font></i>
+        msg.setFrom( <b>new</b> Address( YOUR_NAME, YOUR_EMAIL ) );
+        msg.setRecipient( RecipientType.TO, <b>new</b> Address( RECIPIENT_NAME, RECIPIENT_EMAIL ) );
+        msg.setSubject( EMAIL_SUBJECT );
+        msg.setText( EMAIL_TEXT );
+
+        <font color="#aa0000"><i>// Send it! Catch the TransportException.</font></i>
+        <b>try</b> {
+            tr.send( msg );
+        }
+        <b>catch</b>( TransportException te ) {
+            System.out.println( <font color="#000099">"Transport Exception: "</font> + te );
+        }
+
+    }
+
+    <b>public</b> <b>static</b> <b>void</b> main( String args[] ) {
+        ExampleApp ea = <b>new</b> ExampleApp();
+    }
+}
+</pre>
+	</td>
+</tr>
+</table>
+
+<p>
+
+<table border=1 cellpadding=3 cellspacing=0>
+<tr bgcolor="#dddddd">
+	<td><code><a name="#exampleservlet.java">ExampleServlet.java</a></code></td>
+</tr>
+</table>
+<table border=1 cellpadding=3 cellspacing=0>
+<tr>
+	<td>
+<pre>
+<font color="#aa0000"><i>/**
+ *  ExampleServlet.java
+ *
+ *  CS Email Package, Version 1.2
+ *
+ *  September 27, 1999
+ *
+ *  Copyright (C) 1999  Bill Lynch, CoolServlets.com
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU Library General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *  http://www.coolservlets.com/LGPL.html
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Library General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Library General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */</font></i>
+
+<b>import</b> java.io.*;
+<b>import</b> javax.servlet.*;
+<b>import</b> javax.servlet.http.*;
+<b>import</b> com.coolservlets.email.*;
+
+<font color="#aa0000"><i>/**
+ *  This is a fully functional demo servlet which uses the Email Package.
+ *
+ *  (!)
+ *  This demo assumes you have some knowledge of Java serlvets and you have
+ *  access to a web server that supports servlets. If you don't a good place
+ *  to start learning about servlets is:
+ *      http://www.coolservlets.com
+ *
+ *  To run this demo, you need to do a few things:
+ *
+ *  (1) Have access to a web server that can run Java servlets.
+ *
+ *  (2) Copy this servlet in your site's servlet directory.
+ *
+ *  (3) Copy the email classes into the servlet directory in the following way:
+ *      If your servlet directory on the server is "servlets" then:
+ *      /servlets/  &lt;-- ExampleServlet.class goes here
+ *               / com /
+ *                     / coolservlets /
+ *                                    / email / &lt;email classes&gt;
+ *      where &lt;email classes&gt; are the files included in the distribution.
+ *
+ *  (4) Find out what the HTTP path is to the servlet directory. This is
+ *      the path you use to invoke serlvets with. For example, on
+ *      CoolServlets.com, the path is:
+ *          http://www.coolservlets.com/servlet/
+ *      You'll need to change the SERVLET_HTTP_PATH private variable in the
+ *      ExampleServlet class below to this value.
+ *
+ */</font></i>
+<b>public</b> <b>class</b> ExampleServlet <b>extends</b> HttpServlet {
+
+    <b>private</b> String SERVLET_HTTP_PATH = <font color="#000099">""</font>;  <font color="#aa0000"><i>/* ie, http://www.yourSite.com/servlet/     */</font></i>;
+
+    <font color="#aa0000"><i>// Init method -- called the first time the servlet is run.</font></i>
+    <b>public</b> <b>void</b> init( ServletConfig config ) throws ServletException {
+        <b>super</b>.init(config);
+    }
+
+    <font color="#aa0000"><i>// Since this servlet makes no distinction between a GET or a POST, pass</font></i>
+    <font color="#aa0000"><i>// the GET requests off to the doPost method.</font></i>
+    <b>public</b> <b>void</b> doGet( HttpServletRequest request, HttpServletResponse response )
+            throws ServletException, IOException {
+        doPost( request, response );
+    }
+
+    <b>public</b> <b>void</b> doPost( HttpServletRequest request, HttpServletResponse response )
+            throws ServletException, IOException {
+        response.setContentType( <font color="#000099">"text/html"</font> );     <font color="#aa0000"><i>// Tell the client we're going to output HTML.</font></i>
+        PrintWriter out = response.getWriter();     <font color="#aa0000"><i>// Get the writer.</font></i>
+
+        <font color="#aa0000"><i>// Check for the "mode" parameter. If it's blank, we're running the servlet</font></i>
+        <font color="#aa0000"><i>// for the first time, so print out the form where the user can input</font></i>
+        <font color="#aa0000"><i>// the email information. Otherwise, we have the email info incoming,</font></i>
+        <font color="#aa0000"><i>// so we need to process it (the else branch).</font></i>
+        String mode = request.getParameter( <font color="#000099">"mode"</font> );
+        <b>if</b>( mode == <b>null</b> || mode.length() == 0 ) {
+            out.println( printHeader( <font color="#000099">"ExampleServlet, CS Email Package 1.2, CoolServlets.com"</font> ) );
+            out.println( printFormHTML( SERVLET_HTTP_PATH ) );
+            out.println( printFooter() );
+        }
+        <b>else</b> {
+            out.println( printHeader( <font color="#000099">"CS Email Package 1.2"</font> ) );
+            getParametersAndSendEmail( request, out );
+            out.println( printFooter() );
+        }
+        out.close();
+    }
+
+    <font color="#aa0000"><i>// This is where the email classes finally get used. It's exactly similiar</font></i>
+    <font color="#aa0000"><i>// to the ExampleApp class (the other demo in this package).</font></i>
+    <b>private</b> <b>void</b> getParametersAndSendEmail( HttpServletRequest request, PrintWriter out ) {
+        <font color="#aa0000"><i>// Get the parameters</font></i>
+        String YOUR_NAME       = request.getParameter( <font color="#000099">"fromName"</font> );
+        String YOUR_EMAIL      = request.getParameter( <font color="#000099">"fromEmail"</font> );
+        String RECIPIENT_NAME  = request.getParameter( <font color="#000099">"toName"</font> );
+        String RECIPIENT_EMAIL = request.getParameter( <font color="#000099">"toEmail"</font> );
+        String EMAIL_SUBJECT   = request.getParameter( <font color="#000099">"subject"</font> );
+        String EMAIL_TEXT      = request.getParameter( <font color="#000099">"text"</font> );
+        String SMTP_HOST       = request.getParameter( <font color="#000099">"smtpHost"</font> );
+        <b>int</b>    SMTP_PORT       = Integer.parseInt( request.getParameter( <font color="#000099">"smtpPort"</font> ) );
+
+        <font color="#aa0000"><i>// Create the message and transport objects:</font></i>
+        Message msg  = <b>new</b> Message();
+        Transport tr = <b>new</b> Transport( SMTP_HOST, SMTP_PORT );
+
+        <font color="#aa0000"><i>// Set the FROM, TO, SUBJECT and text of the email message</font></i>
+        msg.setFrom( <b>new</b> Address( YOUR_NAME, YOUR_EMAIL ) );
+        msg.setRecipient( RecipientType.TO, <b>new</b> Address( RECIPIENT_NAME, RECIPIENT_EMAIL ) );
+        msg.setSubject( EMAIL_SUBJECT );
+        msg.setText( EMAIL_TEXT );
+
+        <font color="#aa0000"><i>// Send it! Catch the TransportException.</font></i>
+        <b>try</b> {
+            tr.send( msg );
+            out.println( <font color="#000099">"Message was sent!"</font> );
+        }
+        <b>catch</b>( TransportException te ) {
+            out.println( <font color="#000099">"Transport Exception: "</font> + te );
+        }
+    }
+
+    <font color="#aa0000"><i>// The next 3 methods I wrote so the doPost method would be more readable.</font></i>
+    <b>private</b> String printHeader( String title ) {
+        <b>return</b>( <font color="#000099">"&lt;html&gt;&lt;head&gt;&lt;title&gt;"</font>+ title +<font color="#000099">"&lt;/title&gt;&lt;/head&gt;&lt;body&gt;"</font> );
+    }
+
+    <b>private</b> String printFooter( ) {
+        <b>return</b>( <font color="#000099">"&lt;/body&gt;&lt;/html&gt;"</font> );
+    }
+
+    <font color="#aa0000"><i>// By the way, it's inefficient to do String concatenation in the following</font></i>
+    <font color="#aa0000"><i>// way. Check out the CoolServlets.com tips section for a better example:</font></i>
+    <font color="#aa0000"><i>// http://www.coolservlets.com/developer/tips/</font></i>
+    <b>private</b> String printFormHTML( String servletPath ) {
+        String html = <font color="#000099">""</font>;
+                html += <font color="#000099">"&lt;form method=post action='"</font>+ servletPath +<font color="#000099">"ExampleServlet'&gt;"</font>;
+                html += <font color="#000099">" &lt;input type='hidden' name='mode' value='sendEmail'&gt;"</font>;
+                html += <font color="#000099">" &lt;pre&gt;"</font>;
+                html += <font color="#000099">" SMTP Host:  &lt;input type='text' name='smtpHost' size=30&gt;\n"</font>;
+                html += <font color="#000099">" SMTP Port:  &lt;input type='text' name='smtpPort' size=30&gt;\n"</font>;
+                html += <font color="#000099">" From Name:  &lt;input type='text' name='fromName' size=30&gt;\n"</font>;
+                html += <font color="#000099">" From Email: &lt;input type='text' name='fromEmail' size=30&gt;\n"</font>;
+                html += <font color="#000099">" To Name:    &lt;input type='text' name='toName' size=30&gt;\n"</font>;
+                html += <font color="#000099">" To Email:   &lt;input type='text' name='toEmail' size=30&gt;\n"</font>;
+                html += <font color="#000099">" -------------------------------------------\n"</font>;
+                html += <font color="#000099">" Subject:    &lt;input type='text' name='subject' size=30&gt;\n"</font>;
+                html += <font color="#000099">" Text:\n"</font>;
+                html += <font color="#000099">"             &lt;textarea cols=28 rows=10 wrap='virtual' name='text'&gt;&lt;/textarea&gt;\n"</font>;
+                html += <font color="#000099">" -------------------------------------------\n"</font>;
+                html += <font color="#000099">" &lt;input type='submit' value='Send'&gt;\n"</font>;
+                html += <font color="#000099">" &lt;/pre&gt;"</font>;
+                html += <font color="#000099">"&lt;/form&gt;"</font>;
+        <b>return</b> html;
+    }
+}
+</pre>
+	</td>
+</tr>
+</table>
+
+
+
+<br><br><br>
+
+<!-- Begin Footer -->
+<center>
+<table cellpadding=0 cellspacing=0 width="60%" border=0>
+	<td bgcolor="#666666"><img src="images/dot.gif" width=1 height=1 border=0></td>
+</table>
+<font size="-1" color="#333333">
+Copyright &copy; CoolServlets.com 1999
+</font>
+</center>
+<!-- End Footer -->
+
+</body>
+</html>
+

@@ -1,0 +1,147 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>Readme.html for webforum (now in English)</TITLE>
+</HEAD>
+<BODY>
+<H1>Readme.html for webforum (now in English)</H1>
+
+<HR>
+<H2>Installation</H2>
+<P><B>JDK1.1 or better required.</B>
+
+<P>Beside the optional CSS file (for HTML client-side formatting) and the provided
+locale file (English.properties, Italian.properties or French.properties),
+the servlet requires two configuration files that you may need to edit.
+The first file set the global properties for the forum and the second one is
+a user list. The user list file is specified in the global properties file.
+
+<P>The servlet is called through the URL<BR>
+http://mydomaine/servlet/com.ondelette.servlet.webforum.WebForumServlet?_FORUMFILE_=myconfigfile<BR>
+
+
+<H3>In short... (you might want to check the sample configuration files first)</H3>
+<UL>
+<LI>Copy the *.class files in the "servlets" directory designated by your server, this is usually a directory called servlet.</LI>
+<LI>Copy a property file like "forumsample.properties" anywhere on your system (but make sure
+that the JVM can read the file). Let's assume you called this file "myconfigfile". Make sure
+that the "MessageArchiveDirectory" directory is both readable and writeable for the JVM.</LI>
+<LI>Copy the locale properties file (English.properties, French.properties...) in the location
+specified by myconfigfile.</LI>
+<LI>Copy a user list file in the location specified by myconfigfile. The file can
+be empty. Make sure the file is writable for the servlet.</LI>
+<LI>You might need to copy a CSS file at the URL specified by myconfigfile.</LI>
+<LI>Launch the servlet with <BR>http://mydomain/servlet/com.ondelette.servlet.webforum.WebForumServlet?_FORUMFILE_=myconfigfile<BR>
+where myconfigfile is the path to your configuration file (it can be a relative path
+with respect to your JVM user.dir or an absolute path). Please note that
+some web servlet might have a different alias for servlets (so it can be
+http://mydomain/myservlets/... for example).
+</LI>.
+</UL>
+<P>sample configuration file ("myconfigfile")&nbsp;:
+
+<PRE>
+MessageArchiveDirectory=SampleForumDirectory
+ForumLocaleFile=English.properties
+UserListFile=forumSampleUserList.properties
+SaveDelay=60
+ForumTitle=A title (may contain HTML)
+ForumSubTitle=A subtitle (may contain HTML)
+ForumFooter=place some HTML here for your footer
+AuthorizationLevel=0
+CSSURL=http://mydomain/sample/sample.css
+WelcomeURL=http://mydomain/sample/forumsample.html
+</PRE>
+
+
+<P>Note&nbsp;: It isn't require to create the MessageArchiveDirectory, the servlet
+will do it if needed, but make sure the directory is writeable for the JVM.
+
+
+<P>The parameter "AutorizationLevel" allows you to limit access to the forum to
+only these users with the proper autorization level
+
+<P><B>Definition of the autorization levels</B>
+<PRE>
+NORMAL = 0;
+IDENTIFIEDGUEST = 2;
+MEMBER = 32;
+EXECUTIVEMEMBER = 64;   // can erase messages on the forum
+VIPMEMBER = 128; // can erase messages on the forum, reset the forum, add and remove users to the user list
+ADMIN = 256; // same as VIPMEMBER except that the user cannot be erased or create (must be added manually to the user list file)
+</PRE>
+
+<P>We can add a line such as "PostPrivilege=x" where x is an autorization number.
+This makes sure that the posting form is only visible to users having at least the
+specified autorization level. Posting is still possible for other users if they
+somebody provide a proper posting form (possibly as an HTML page).
+
+
+
+<HR>
+
+
+
+<H2>FAQ</H2>
+<UL>
+
+<LI>
+Isn't it dangerous to have the servlet read arbitrary files on my server (e.g. /etc/passwd)
+<P>The servlet will read the file only (never write to it) and will check
+that it is a proper configuration file without ever disclosing its content if
+it isn't a proper configuration file.
+</LI>
+
+<LI>
+I want to quickly check my installation?
+<P>Type "http://mydomain/servlet/com.ondelette.servlet.webforum.WebForumServlet"
+once the .class files are in place. You don't need to configure a forum to
+check the installation.
+</LI>
+
+<LI>
+I loose the messages on my forum after a few minutes.
+<P>Check that the MessageArchiveDirectory is writeable for the servlet.
+</LI>
+
+<LI>
+My company wants to use this forum for a commercial web site... can I use WebForum? What will
+it cost us?
+<P>Yes you can and it will be entirely free.
+</LI>
+
+<LI>
+I know it is free, but can I get commercial support in case something goes wrong?
+<P>Yes you can, get in touch with Daniel Lemire or anybody else willing to
+offer such services.
+</LI>
+
+<LI>
+Does it work under Unix (including Linux), under Windows?
+<P>Yes and yes. It should work everywhere servlet support is available.
+</LI>
+
+<LI>
+What is the servlet I should call and what parameter do I need?
+<P>The main servlet is com.ondelette.servlet.webforum.WebForumServlet. There are
+other servlets, but this is the first one you'll want to check and use. You need
+at least one parameter pointing to the file path of you configuration file (a
+properties file, see above for documentation) and that's the _FORUMFILE_
+parameter.
+</LI>
+<LI>
+Why isn't WebForum distributed with a War file for automatic installation on
+servlet 2.2 compliant systems?
+<P>Currently, most systems I (Daniel Lemire) have access to only offer
+servlet 2.0 support (specifically JServ under Apache). Future versions of
+WebForum will have to support servlet 2.2 features.
+</LI>
+
+
+</UL>
+<HR>
+&copy; 2000, Daniel Lemire<BR>
+http://www.ondelette.com/
+
+</BODY>
+</HTML>

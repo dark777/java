@@ -1,0 +1,4 @@
+Este Java servlet lhe permite pegar informações sobre o usuário que acessou sua pagina. 
+Todos os dados são gravados em um arquivo texto que contem as seguinte informação
+para cada usuário: IP address, data, browser, referência, charset, encoding, e idioma. 
+https://www.scriptbrasil.com.br/script/jsp/LogServlet.class

@@ -1,0 +1,26 @@
+LoadModule auth_smb_module libexec/mod_auth_smb.so
+AddModule mod_auth_smb.c
+
+Include /opt/jakarta-tomcat/conf/tomcat-apache.conf
+
+Alias /firefly /opt/jakarta-tomcat/webapps/firefly
+<Directory "/opt/jakarta-tomcat/webapps/firefly">
+    Options FollowSymLinks
+</Directory>
+ApJServMount /firefly/servlet /firefly
+<Location /firefly/WEB-INF/ >
+    AllowOverride None
+    deny from all
+</Location>
+
+<Location /firefly/logon >
+    Auth_SMB on
+    AuthType Basic
+    AuthName Firefly
+    Auth_SMB_Server LILY
+    Auth_SMB_Backup FREEMAN
+    Auth_SMB_Domain STPAULS
+    <Limit GET POST>
+        require valid-user
+    </Limit>
+</Location>

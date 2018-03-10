@@ -1,0 +1,325 @@
+<html>
+<head>
+  <TITLE>jChatBox - Administration Guide</TITLE>
+<STYLE TYPE="text/css">
+<!--
+a {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #0000FF; text-decoration: none}
+a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #333333; text-decoration: underline}
+-->
+</STYLE>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#333333" vlink="#6666FF" alink="#333333">
+<table width="770" border="0" name="Main" height="600" cellpadding="0" cellspacing="0" vspace="0" hspace="0">
+  <tr>
+    <td>
+      <table width="770" border="0" name="Head" height="86" cellpadding="0" cellspacing="0" vspace="0" hspace="0">
+        <tr>
+          <td width="279" height="86"><a href="http://www.javazoom.net" target="_top"><img src="finemenu/title.gif" width="279" height="86" border="0" alt="JavaZOOM Web Site" vspace="0" hspace="0"></a></td>
+          <td width="491" height="86" align="center"><a href="http://www.javazoom.net/jzservlets/jchatbox/jchatbox.html" target="_top"><img src="img/jchatbox.gif" width="400" height="43" border="0" alt="jChatBox homepage"></a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="150" height="514">
+      <table width="770" border="0" height="514" name="Body" cellpadding="0" cellspacing="0" vspace="0" hspace="0">
+        <tr nowrap>
+          <td height="514" width="146" valign="top">
+            <table width="146" border="0" height="514" cellpadding="0" cellspacing="0" vspace="0" hspace="0">
+              <tr nowrap align="left">
+                <td width="146" height="146" background="finemenu/middle.gif"> 
+                  <b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<font color="#000066">&#149;</font></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">&nbsp;</font></b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b><font color="#000099"><a href="software.html" target="_top">Software</a></font></b></font><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><br>
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<font color="#000066">&#149;</font></font></font>&nbsp;</b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b><font color="#000099"><a href="installation.html">Installation</a></font></b></font><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><br>
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<font color="#000066">&#149;</font></font></font>&nbsp;</b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#000066"><b><a href="configuration.html">Configuration</a></b></font><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><br>
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<font color="#000066">&#149;</font></font></font>&nbsp;</b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#000066"><b>Administration</b></font><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><br>
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<font color="#000066">&#149;</font></font></font>&nbsp;</b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="userguide.html" target="_top"><b>User 
+                  guide </b></a></font><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><br>
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<font color="#000066">&#149;</font></font></font>&nbsp;</b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><a href="api.html" target="_top"><b>API</b></a></font><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><br>
+                  </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif">&nbsp;<font color="#000066">&#149;</font></font></font>&nbsp;</b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b><a href="license.html" target="_top">License</a></b></font><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"> 
+                  </font></b> </td>
+              </tr>
+              <tr nowrap align="center">
+                <td width="146" height="167" background="finemenu/bottom.gif">
+                  <a href="applets/jads21/jads.html" target="_self"><br>
+                  </a></td>
+              </tr>
+              <tr nowrap align="center" valign="top">
+                <td width="146" height="201"><font size="-1"><a href="index.html"><font size="-2">&lt;&lt; 
+                  back</font></a></font> </td>
+              </tr>
+            </table>
+          </td>
+          <td height="514" width="624" align="center" valign="top"> 
+            <table width="94%" border="0" cellspacing="1" cellpadding="0" align="center">
+              <tr> 
+                <td valign="top" height="103"> 
+                  <p align="center"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font color="#000099" face="Courier New, Courier, mono"><b><font face="Verdana, Arial, Helvetica, sans-serif">- 
+                    Administration Guide -</font></b></font></font></font></p>
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><b><font color="#000099">Once 
+                    you've <a href="installation.html">installed</a> and <a href="configuration.html">configured</a> 
+                    jChatBox</font></b> you can launch jChatBox and create/manager/monitor 
+                    chatrooms. You can also track user's sessions. Finally you 
+                    can modify jChatBox system properties.</font></font></font></p>
+                  <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <tr align="center" bgcolor="#99CCFF"> 
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><a href="administrationguide.html#authentication"><b>Authentication</b></a></font></td>
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><a href="administrationguide.html#chatrooms"><b>Chatrooms</b></a> 
+                        [<a href="administrationguide.html#open"><b>open</b></a>][<b><a href="administrationguide.html#manage">manage</a></b>]</font></td>
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><a href="administrationguide.html#users"><b>Users</b></a></font></td>
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="-2"><a href="administrationguide.html#system"><b>System 
+                        properties</b></a></font></td>
+                    </tr>
+                  </table>
+                  <br>
+                  <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <tr>
+                      <td bgcolor="#EEEEEE" height="20"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#0000FF"><a name="authentication"></a></font></b></font></font></font></font></b></font></font></font></font></font></font></font></font></font></font></font></font></font></font></b></font></font></font></font></font><font color="#0000FF">&#149; 
+                        AUTHENTICATION</font></font></font></b></font></font></td>
+                    </tr>
+                  </table>
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>Administration 
+                    GUI is login/password protected.</b><br>
+                    When you access http://yourserver.com/admin/index.jsp you 
+                    get the screen below. Default login is : <b><font color="#CC0000">system</font></b> 
+                    and default password is : <b><font color="#CC0000">password</font></b>. 
+                    You could change both in System properties.</font></font></font></font></p>
+                  <p align="center"><img src="img/adminlogin.gif" width="500" height="431" alt="SYSTEM Login"><br>
+                    <font color="#333333" face="Verdana, Arial, Helvetica, sans-serif" size="-2">- 
+                    Authentication page -</font></p>
+                  <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <tr> 
+                      <td bgcolor="#EEEEEE"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#0000FF"><a name="chatrooms"></a></font></b></font></font></font></font></b></font></font></font></font></font></font></font></font></font></font></font></font></font></font></b></font></font></font></font></font><font color="#0000FF">&#149; 
+                        </font></font></font></b></font></font><font color="#0000FF"> 
+                        CHATROOMS</font></font></font></b></font></font></td>
+                    </tr>
+                  </table>
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>jChatBox 
+                    supports multiple chatrooms.</b> You can open new chatroom 
+                    by following &quot;<b><font color="#CC0000">open a chatroom</font></b>&quot; 
+                    link. You can manage a chatroom by selecting the chatroom 
+                    in the list box named &quot;<b><font color="#CC0000">Manage 
+                    chatroom</font></b>&quot;. You can backup all chatrooms by 
+                    following &quot;<b><font color="#CC0000">Backup chatrooms</font></b>&quot; 
+                    link. See the screen below to locate these features.<br>
+                    <font size="-2">Note that you can logout the administration 
+                    through the &quot;<font color="#CC0000">Logout</font>&quot; 
+                    link. System properties page is available through &quot;<font color="#CC0000">Manage 
+                    jChatBox</font>&quot; link.</font></font></font></font></font></p>
+                  <p align="center"><img src="img/menu.gif" width="500" height="430" alt="Main Menu"><br>
+                    <font color="#333333" face="Verdana, Arial, Helvetica, sans-serif" size="-2">- 
+                    Menu page -</font> </p>
+                  <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <tr>
+                      <td>
+                        <hr size="1" noshade>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#EEEEEE"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#0000FF"><a name="open"></a></font></b></font></font></font></font></b></font></font></font></font></font></font></font></font></font></font></font></font></font></font></b></font></font></font></font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#0000FF">&#149; 
+                        Open a chatroom</font></b></font></font><font color="#0000FF"></font></font></font></b></font></font></font></font></font></td>
+                    </tr>
+                  </table>
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">You 
+                    need severals parameters (<b><font color="#CC0000">basics</font></b> 
+                    and <b>advanced</b>) to open a new chatroom<b> :<br>
+                    <font color="#CC0000"><br>
+                    Name</font></b> : The name of the chatroom.<br>
+                    <b><font color="#CC0000">Subject</font></b> : The subject 
+                    of the chatroom.<br>
+                    <b><font color="#CC0000">Max. users.</font></b> : Maximum 
+                    users for the chatroom. No more users allowed to enter in 
+                    the chatroom once this limit is reached.<br>
+                    <b><font color="#CC0000">Display Mode</font></b> : There are 
+                    four way to display chatroom's content (i.e. chatooms clients). 
+                    It could be in an HTML/JavaScript page, an Applet, a Java 
+                    application or in a Macromedia Flash client. For now, only 
+                    HTML/JavaScript clients are implemented, so you have to choose 
+                    between <b><font color="#333333">Framed (JSP)</font></b> or 
+                    <font color="#333333"><b>Buffered-Framed (JSP)</b></font> 
+                    modes. Buffered-Framed one is optimized to lower flickering 
+                    effect. &quot;Framed&quot; means that HTML/JavaScript clients 
+                    need frames.<br>
+                    <b><br>
+                    History </b>: It's the number of lines, from the chatroom's 
+                    content, that will be displayed on clients. It's a &quot;window&quot; 
+                    on the chatroom's content starting from the most recent message. 
+                    The more history value is high, the more you need bandwith. 
+                    One page is around 5 KB with history=40.<br>
+                    <b>Refresh model</b> : jChatBox uses a PULL system to keep 
+                    all clients synchonized. It means that each client asks for 
+                    the chatroom's content periodically. jChatBox provide three 
+                    model of &quot;time-period&quot; to refresh clients :<br>
+                    </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font color="#000099">+</font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#000099"> 
+                    Time-Constant =&gt; </font></font></font></font></font></font></font></font></font><font color="#000099">Period 
+                    is constant<font face="Verdana, Arial, Helvetica, sans-serif" size="-1"> 
+                    (in seconds).<br>
+                    + RoomLoad =&gt; The more chatroom is loaded, the more its 
+                    clients are &quot;refreshed&quot;.<br>
+                    </font></font><font face="Verdana, Arial, Helvetica, sans-serif" color="#000099"><font size="-1"><font size="-1"><font size="-2"><font size="-1">+<font size="-1"> 
+                    Action-Tracker =&gt; The more an user chats, the more it is 
+                    &quot;refreshed&quot;.<br>
+                    </font></font></font></font></font></font><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font size="-1"><font size="-2"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>Refresh 
+                    limit</b> : jChatBox is linked to refresh model one. Refresh 
+                    period can't be longer than this value.<br>
+                    <b>Private message</b> : This parameter allows system user 
+                    to enable/disable private message feature for the chatroom.<br>
+                    <b>Filters </b> : This parameter applies filters to the chatroom's 
+                    content.<br>
+                    <font color="#000099"><b>+ HTML filter</b> escapes &quot;&lt;&quot; 
+                    and &quot;&gt;&quot; characters to prevent from HTML tags 
+                    send by users. These tags could mess up the chatroom (i.e. 
+                    : javascript tag, images ...).<br>
+                    </font><font color="#990000"><b>+ URL Converter filter</b> 
+                    transforms - on the fly - user's messages including http://..., 
+                    ftp://..., mailto:..., news://.. into hyperlinks. It could 
+                    be useful for users. Note that links are always opened in 
+                    a new browser's window.<br>
+                    </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font size="-1"><font size="-2"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Much 
+                    more filters to come ...</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font><font color="#990000"> 
+                    </font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></p>
+                  <p align="center"><img src="img/open.gif" width="500" height="413" alt="Open a chatroom"><br>
+                    <font color="#333333" face="Verdana, Arial, Helvetica, sans-serif" size="-2">- 
+                    Chatroom opening page -</font> </p>
+                  <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <tr> 
+                      <td> 
+                        <hr size="1" noshade>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td bgcolor="#EEEEEE"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#0000FF"><a name="manage"></a>&#149; 
+                        Manage a chatroom</font></b></font></font><font color="#0000FF"></font></font></font></b></font></font></font></font></font></font></font></font></font></font></font></font></font></font></b></font></font></font></font></font></td>
+                    </tr>
+                  </table>
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">Once 
+                    the chatroom is opened you can update some parameters : <b>Subject</b>, 
+                    <b>History</b>, <b>Refresh Model</b>, <b>Refresh Limit</b>, 
+                    <b>Private Messages</b> and <b>Filters</b>. The update occurs 
+                    in real time as soon as you click on &quot;<b><font color="#CC0000">Update</font></b>&quot; 
+                    button.<br>
+                    <br>
+                    You can generate a transcript (text file dump) of the chatroom 
+                    through the Transcript form. Fill in a transcript filename 
+                    and click on &quot;<b><font color="#CC0000">Generate</font></b>&quot;. 
+                    The text file will be stored in logs folder.<br>
+                    <br>
+                    You can close the chatroom through &quot;<b><font color="#0000CC">Close</font></b>&quot; 
+                    link. The whole chatroom will be lost.<br>
+                    <br>
+                    You can join the chatroom by following &quot;<b><font color="#0000CC">Join</font></b>&quot; 
+                    link. You will be logged as SYSTEM user so filters don't applies.<br>
+                    <br>
+                    <font size="-2"> For Users and Blacklist features see <a href="administrationguide.html#users">Users</a> 
+                    section.</font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></p>
+                  <p align="center"><img src="img/chatroom.gif" width="500" height="462" alt="Manage your chatroom"><br>
+                    <font color="#333333" face="Verdana, Arial, Helvetica, sans-serif" size="-2">- 
+                    Chatroom mangement page -</font> </p>
+                  <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <tr> 
+                      <td bgcolor="#EEEEEE" height="20"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#0000FF"><a name="users"></a></font></b></font></font></font></font></b></font></font></font></font></font></font></font></font></font></font></font></font></font></font></b></font></font></font></font></font><font color="#0000FF">&#149; 
+                        USERS</font></font></font></b></font></font></td>
+                    </tr>
+                  </table>
+                  <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1">You 
+                    can list users through &quot;<b><font color="#0000CC">Users</font></b>&quot; 
+                    link. You will learn about <b>Name</b>, <b>IP Address</b>, 
+                    <b>User Agent</b> (Netscape, Internet Explorer,...) and <b>last 
+                    accessed time</b> (in seconds) of any logged user.<br>
+                    You can also kickoff or ban any user. &quot;<b><font color="#990000">kickoff</font></b>&quot; 
+                    means that the user will be kicked off the chatroom for <u>a 
+                    few seconds only</u>. He could join the chatroom again. &quot;<b><font color="#990000">ban</font></b>&quot; 
+                    means that user's <u>IP Address will be banned</u>. He couldn't 
+                    join the chatroom with the same IP.<br>
+                    <font color="#FF0000"><b>All banned users (IP) move to Blacklist</b></font>. 
+                    You can clear the whole blacklist or only some IP address. 
+                    Note that only SYSTEM user knows about users' IP.<br>
+                    </font><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><i><br>
+                    jChatBox identifies guest users (nickname), but it doesn't 
+                    provide authentication (login/password) yet.</i></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></p>
+                  <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                    <tr> 
+                      <td bgcolor="#EEEEEE" height="20"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><font size="-2"><b><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#0000FF"><a name="system"></a></font></b></font></font></font></font></b></font></font></font></font></font></font></font></font></font></font></font></font></font></font></b></font></font></font></font></font><font color="#0000FF">&#149; 
+                        SYSTEM PROPERTIES</font></font></font></b></font></font></td>
+                    </tr>
+                  </table>
+                  <p><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">You 
+                    can modify jChatBox system properties (jchatbox.xml) through 
+                    the administration GUI below. Once saved, modifications will 
+                    be taken into account on the next login.<br>
+                    <br>
+                    <b>Backup file</b> : Backup filename of jChatBox. Chatrooms' 
+                    dump will be stored there.<br>
+                    </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>Log 
+                    folder </b> : Log folder of jChatBox. Log files will be stored 
+                    there. </font></font></font></font><br>
+                    </font><font face="Verdana, Arial, Helvetica, sans-serif"><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>System 
+                    login</b> : SYSTEM login. Default is <b><font color="#990000">system</font></b>. 
+                    You should modify it. <br>
+                    </font></font><font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>System 
+                    email </b>: SYSTEM email.</font></font></font></font></font><br>
+                    <font face="Verdana, Arial, Helvetica, sans-serif"><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>TimeOut</b> 
+                    : User's session timeout in seconds. </font></font></font><font size="-1"><font face="Verdana, Arial, Helvetica, sans-serif" size="-1">(e.g. 
+                    if an user closes its browser then he will leave the chatroom 
+                    automatically after the TimeOut period).<br>
+                    <b>CookieID </b>: Session tracking ID. Do not modify it except 
+                    if session tracking fails.<br>
+                    <b>License file </b>: License filename. You have to modify 
+                    it if you purchase a license to use.<br>
+                    <b>Update password</b> : You should modify SYSTEM password. 
+                    Default is <b><font color="#990000">password</font></b>. You 
+                    have to select the checkbox and fill in password forms twice 
+                    before submiting. Note this password is stored as its MD5 
+                    value (i.e. encrypted).<br>
+                    </font></font></font></font></p>
+                  <p align="center"><img src="img/xmlconfig.gif" width="500" height="489"><br>
+                    <font color="#333333" face="Verdana, Arial, Helvetica, sans-serif" size="-2">- 
+                    System properties page -</font> </p>
+                  <p align="left">&nbsp;</p>
+                  </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="146">
+    <td width="624" align="center" bgcolor="#FFFFFF">
+      <table border="0" cellspacing="1" cellpadding="0" vspace="0" hspace="0" name="Short Menu" width="100%" align="center" height="30">
+        <tr>
+          <td nowrap align="center" width="14%" bgcolor="#FFFF99"> <font size="-2"><a href="http://www.javazoom.net" target="_top"><font face="Arial, Helvetica, sans-serif">[News]</font></a></font> 
+          </td>
+          <td nowrap align="center" width="14%" bgcolor="#FFFF99"> <font size="-2"><a href="http://www.javazoom.net/applets/applets.html" target="_top"><font face="Arial, Helvetica, sans-serif">[Applets]</font></a></font> 
+          </td>
+          <td nowrap align="center" width="14%" bgcolor="#FFFF99"> <font size="-2"><a href="http://www.javazoom.net/jzservlets/servlets.html" target="_top"><font face="Arial, Helvetica, sans-serif">[Servlets]</font></a></font> 
+          </td>
+          <td nowrap align="center" width="16%" bgcolor="#FFFF99"> <font size="-2"><a href="http://www.javazoom.net/services/services.html"
+        target="_top"><font face="Arial, Helvetica, sans-serif">[Services]</font></a></font> 
+          </td>
+          <td nowrap width="14%" align="center" bgcolor="#FFFF99"> <font size="-2" face="Arial, Helvetica, sans-serif"><a href="http://www.javazoom.net/javalayer/javalayer.html" target="_top">[Projects]</a></font> 
+          </td>
+          <td nowrap align="center" width="14%" bgcolor="#FFFF99"> <font size="-2"><a href="http://www.javazoom.net/links/links.html" target="_top"><font face="Arial, Helvetica, sans-serif">[Links]</font></a></font> 
+          </td>
+          <td nowrap align="center" width="14%" bgcolor="#FFFF99"> <font size="-2" face="Arial, Helvetica, sans-serif"><a href="http://www.javazoom.net/links/links.html" target="_top">[About]</a></font> 
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="146" align="center" valign="bottom">
+    <td width="624" align="center" valign="bottom" nowrap>
+      <p><font size="-1" face="Courier New, Courier, mono">Copyright &copy; JavaZOOM 
+        1999-2001</font></p>
+      <p><font size="-1" face="Courier New, Courier, mono"><font size="-2" face="Arial, Helvetica, sans-serif"><a href="http://java.sun.com" target="_blank">Java</a>
+        is a trademark of Sun Microsystems,Inc. All other company and/or product
+        names are the property of their respective owners.</font></font></p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

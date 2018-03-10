@@ -1,0 +1,5 @@
+#!/bin/sh
+/opt/jakarta-tomcat/bin/shutdown.sh
+./build all
+ln -s /opt/jakarta-tomcat/webapps/firefly/lib/*.jar /opt/jakarta-tomcat/webapps/firefly/WEB-INF/lib/
+/opt/jakarta-tomcat/bin/startup.sh

@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title>CSDateTime Demo</title>
+</head>
+
+<body>
+<font face="arial,helvetica">
+
+<center>
+<font size=+2>CSDateTime Demo</font><br>
+<font size=+1><font color="#000066">Cool</font>Servlets.com</font>
+</center>
+
+
+<BR><BR>
+
+This page uses server-side includes (SSI) to demonstrate uses of the
+CSDateTime servlet. See your server documentation for information about
+SSI. If everything is configured correctly and you are viewing this
+page through your webserver, you should see the date and time displayed
+below in a variety of formats. If nothing appears in the Date and Time
+column, then SSI or the servlet are not configured correctly.
+<P>
+For a full list of valid parameters for the servlet, see the Readme 
+file.
+
+<BR><BR>
+
+<table border=1 width=550 cellpadding=2 cellspacing=0>
+<tr bgcolor="#CCCCDD">
+  <td align=center><font face="arial,helvetica">
+    <b>Date and Time</b>
+    </font>
+  </td>
+  <td align=center><font face="arial,helvetica">
+    <b>SSI Syntax</b>
+    </font>
+  </td>
+</tr>
+<tr>
+  <td>
+    <SERVLET CODE=CSDateTime></SERVLET>
+  </td>
+  <td>
+    &lt;SERVLET CODE=CSDateTime&gt; &lt;/SERVLET&gt;
+  </td>
+</tr>
+<tr bgcolor=#DDDDDD>
+  <td>
+    <SERVLET CODE=CSDateTime>
+    <PARAM name="format" value="MMM - d - yyyy">
+    </SERVLET>
+  </td>
+  <td>
+    &lt;SERVLET CODE=CSDateTime&gt; <br>
+    &lt;PARAM name="format" value="MMM - d - yyyy"&gt; <br>
+    &lt;/SERVLET&gt;
+  </td>
+</tr>
+<tr>
+  <td>
+    <SERVLET CODE=CSDateTime>
+    <PARAM name="format" value="h:mm a, zzzz">
+    </SERVLET>
+  </td>
+  <td>
+    &lt;SERVLET CODE=CSDateTime&gt; <br>
+    &lt;PARAM name="format" value="h:mm a, zzzz"&gt; <br>
+    &lt;/SERVLET&gt;
+  </td>
+</tr>
+<tr>
+  <td>
+    <SERVLET CODE=CSDateTime>
+    <PARAM name="format" value="h:mm a, zzzz">
+	<PARAM name="timeZone" value="EST">
+    </SERVLET>
+  </td>
+  <td>
+    &lt;SERVLET CODE=CSDateTime&gt; <br>
+    &lt;PARAM name="format" value="h:mm a, zzzz"&gt; <br>
+	&lt;PARAM name="timeZone" value="EST"&gt; <br>
+    &lt;/SERVLET&gt;
+  </td>
+</tr>
+</table>
+
+<P>
+You can also call the script without using SSI. However, that will
+simply print out a text string representing the date. Using the
+servlet that way will probably not be very useful. However, it can be
+a good testing mechanism if you are having problems with SSI. 
+For example:<blockquote>
+<a href="http://www.coolservlets.com/servlet/CSDateTime"> 
+http://www.coolservlets.com/servlet/CSDateTime
+</a></blockquote>
+
+</font>
+</body>
+</html>

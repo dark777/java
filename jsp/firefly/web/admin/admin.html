@@ -1,0 +1,88 @@
+
+<html>
+
+<head>
+<TITLE>Firefly Admin Panel</TITLE>
+<!-- sjehay-ok 130500 -->
+<style>
+body { font: 10px, Verdana, Tahoma, Arial }
+td { font: 10px, Verdana, Tahoma, Arial }
+.stdbtn { font: 10px, Verdana, Tahoma, Arial; background-color: #F4F4F4; width: 100px }
+.stdedit { font: 10px, Verdana, Tahoma, Arial; background-color: #F4F4F4; width: 100px }
+strong { font: 10px, Verdana, Tahoma, Arial; font-weight: bold }
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+
+
+function OpenWipeDB() {
+  window.open('wd/wd1.html','C','toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=no,copyhistory=no,scrollbars=no,width=374,height=383');
+}
+
+function OpenAddSection() {
+  window.open('as/as1.jsp','C','toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=no,copyhistory=no,scrollbars=no,width=374,height=383');
+}
+function OpenAddPage() {
+  window.open('ap/ap1.jsp','C','toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=no,copyhistory=no,scrollbars=no,width=374,height=383');
+}
+
+function OpenCredits() {
+  window.open('credits.html','C','toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=no,copyhistory=no,scrollbars=no,width=374,height=383');
+}
+
+function OpenGA() {
+  window.open('ga/ga.jsp','C','toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=no,copyhistory=no,scrollbars=no,width=374,height=383');
+}
+
+function OpenICT() {
+  window.open('ict/ict1.html','C','toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=no,copyhistory=no,scrollbars=no,width=374,height=383');
+}
+
+</script>
+
+</head>
+
+<body background="images/admin.jpg">
+
+<table width="100%" border=0">
+<tr><td height="50" colspan=2></td><tr>
+<tr><td colspan=2><hr color="black" width="100%" size=1><strong>Firefly Admin Panel</strong><hr color="black" width="100%" size=1></td></tr>
+<tr><td width="110">
+<form onSubmit="OpenWipeDB()">
+<input type="submit" value="Wipe Database" class="stdbtn">
+</form>
+</td><td valign=top>Wipe the database and optionally create a new one.</td></tr>
+<tr><td>
+<form onSubmit="OpenAddSection()">
+<input type="submit" value="Add Section" class="stdbtn">
+</form>
+</td><td valign=top>Add a new section (general category, e.g. a single academic subject).</td></tr>
+<tr><td>
+<form onSubmit="OpenAddPage()">
+<input type="submit" value="Add Page" class="stdbtn">
+</form>
+</td><td valign=top>Add a new page (i.e. a screenful of information) to any section.</td></tr>
+<tr><td>
+<form onSubmit="OpenGA()">
+<input type="submit" value="Group Admin" class="stdbtn">
+</form>
+</td><td valign=top>Add, modify and delete groups.</td></tr>
+<tr><td>
+<form onSubmit="OpenCredits()">
+<input type="submit" value="Credits & Legal" class="stdbtn">
+</form>
+</td><td valign=top>View the credits and legal information for firefly.</td></tr>
+<tr><td>
+<form onSubmit="OpenICT()">
+<input type="submit" value="ICT Policy" class="stdbtn">
+</form>
+</td><td valign=top>Check the last time a user agreed to the ICT Policy.</td></tr>
+
+<tr><td>
+<form onSubmit="window.close()">
+<input type="submit" value="Dismiss" class="stdbtn">
+</form>
+</td><td valign=top>Dismiss this panel.</td></tr></table>
+</body>
+</html>

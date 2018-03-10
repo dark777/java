@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- jChatBox XML Configuration - JavaZOOM -->
+<!DOCTYPE jChatBox SYSTEM "jchatbox.dtd">
+<jChatBox>
+	<LOGFOLDER>D:/tomcat/webapps/jchatbox/conf</LOGFOLDER>
+	<BACKUPFILE>D:/tomcat/webapps/jchatbox/conf/backup.ser</BACKUPFILE>
+	<SYSTEMLOGIN>system</SYSTEMLOGIN>
+	<SYSTEMPASSWORD>5f4dcc3b5aa765d61d8327deb882cf99</SYSTEMPASSWORD>
+	<SYSTEMEMAIL>jchatbox@yourdomain.com</SYSTEMEMAIL>
+	<TIMEOUT>300</TIMEOUT>
+	<COOKIEID>JSESSIONID</COOKIEID>
+	<LICENSE>free-for-non-commercial.oxw</LICENSE>
+	<FILTERS>
+		<FILTER>jChatBox.Chat.Filter.HTMLFilter</FILTER>
+		<FILTER>jChatBox.Chat.Filter.URLFilter</FILTER>
+	</FILTERS>
+</jChatBox>

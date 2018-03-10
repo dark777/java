@@ -1,0 +1,69 @@
+
+<HTML>
+<HEAD>
+<TITLE>page d'accueil du forum beta</TITLE>
+<META NAME="Description" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+
+</HEAD>
+<BODY>
+
+<H1>Bienvenue à la page d'accueil du forum beta</H1>
+
+<P>Vous pouvez y accéder directement en cliquant <A HREF="http://www.ondelette.com/servlet/com.ondelette.servlet.webforum.WebForumServlet?_FORUMFILE_=forumacne.properties">ici</A>.
+
+<P>Si on vous a remis un mot de passe, vous pouvez remplir ce formulaire.
+<form action="http://www.ondelette.com/servlet/com.ondelette.servlet.webforum.WebForumServlet" method="post">
+<input type="hidden" name="_FORUMFILE_" value="forumacne.properties">
+<table CLASS="LOGINFORM">
+<TR><TD CLASS="LOGIN">
+Nom d'usager&nbsp;:
+</TD><TD>
+<input type="TEXT" value="" name="_LOGIN_" size="40" maxlength="80">
+</TD></TR>
+<TR><TD CLASS="MESSAGE">
+Mot de passe&nbsp;:
+</TD><TD>
+<input type="PASSWORD" value="" name="_PASSWORD_" size="40" maxlength="80">
+</TD></TR>
+</TABLE>
+<P CLASS="SUBMITBUTTONS">
+<input type="SUBMIT" value="Aller sur le forum" name="GoingIn">
+</P>
+</form>
+
+<P>Vous pouvez aussi vous inscrire directement
+<form action="http://www.ondelette.com/servlet/com.ondelette.servlet.webforum.WebForumServlet" method="post">
+<input type="hidden" name="_FORUMFILE_" value="forumacne.properties">
+<table CLASS="LOGINFORM">
+<TR><TD CLASS="LOGIN">
+Nom d'usager&nbsp;:
+</TD><TD CLASS="LOGIN">
+<input type="TEXT" value="" name="_NEWUSERNAME_" size="40" maxlength="80">
+</TD></TR>
+<TR><TD CLASS="MESSAGE">
+Mot de passe&nbsp;:
+</TD><TD>
+<input type="PASSWORD" value="" name="_NEWUSERPASSWORD_" size="40" maxlength="80">
+</TD></TR>
+<TR><TD CLASS="MESSAGE">
+Mot de passe (confirmation)&nbsp;:
+</TD><TD>
+<input type="PASSWORD" value="" name="_NEWUSERPASSWORD2_" size="40" maxlength="80">
+</TD></TR>
+<TR><TD CLASS="LOGIN">
+Courriel&nbsp;:
+</TD><TD>
+<input type="TEXT" value="" name="_NEWUSEREMAIL_" size="40" maxlength="80">
+</TD></TR>
+</TABLE>
+<P CLASS="SUBMITBUTTONS">
+<input type="SUBMIT" value="Aller sur le forum" name="_SUBSCRIBEUSER_">
+</P>
+</form>
+
+
+<P>Il est important de noter que certains forums ne seront accessibles qu'à la
+condition de disposer d'un mot de passe.
+</BODY>
+</HTML>

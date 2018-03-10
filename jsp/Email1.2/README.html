@@ -1,0 +1,241 @@
+<html>
+<head>
+	<title>CS Email Package : Readme - CoolServlets.com</title>
+</head>
+
+<BODY bgcolor="#ffffff" link="#000099" vlink="#000099" alink="#ff0000">
+
+<!-- Begin header -->
+<table cellpadding=0 cellspacing=0 width="100%" border=0>
+<tr>
+	<td align=left width="1%"><img src="http://www.coolservlets.com/images/header_top.gif" width=600 height=15 border=0></td>
+	<td bgcolor="#ffffff" width="99%"><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=15 border=0></td>
+</tr>
+<tr>
+	<td align=left><img src="http://www.coolservlets.com/images/header_middle.gif" width=600 height=54 border=0></td>
+	<td bgcolor="#0066cc">
+		<table cellpadding=0 cellspacing=0 border=0 width="100%">
+			<tr><td bgcolor="#000000" width="100%"><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=1 border=0></td></tr>
+			<tr><td align=right><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=53 border=0></td></tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td align=left><img src="http://www.coolservlets.com/images/header_bottom.gif" width=600 height=21 border=0 usemap="#header_bottom"></td>
+	<td bgcolor="#999999">
+		<table cellpadding=0 cellspacing=0 border=0 width="100%">
+			<tr><td bgcolor="#000000"><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=1 border=0></td></tr>
+			<tr><td><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=17 border=0></td></tr>
+			<tr><td bgcolor="#000000"><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=1 border=0></td></tr>
+			<tr><td bgcolor="#ffffff"><img src="http://www.coolservlets.com/images/dot.gif" width=1 height=2 border=0></td></tr>
+		</table>
+	</td>
+</tr>
+</table>
+<map name="header_bottom">
+<area shape="rect" coords="167,0,221,18" href="http://www.coolservlets.com/index.html">
+<area shape="rect" coords="221,1,319,18" href="http://www.coolservlets.com/about.html">
+<area shape="rect" coords="320,0,434,18" href="http://www.coolservlets.com/servlets.html">
+<area shape="rect" coords="436,1,497,18" href="http://www.coolservlets.com/support.html">
+<area shape="rect" coords="499,0,599,18" href="http://www.coolservlets.com/developer/index.html">
+<area shape="default" nohref>
+</map>
+<!-- End Header -->
+
+<br>
+
+<!-- Begin AD -->
+<center>
+<SERVLET CODE="CSAdServer">
+<PARAM NAME="getAd" VALUE="true">
+</SERVLET>
+</center>
+<!-- End AD -->
+
+<p>
+
+<font face="arial,helvetica,sans-serif" size=4>
+<a href="index.html">CS Email Package</a> : Readme
+</font>
+
+<hr size=0>
+<center>
+Version, <b>1.2</b>. Release Date, <b>September 27, 1999</b>.
+</center>
+<hr size=0>
+<center>
+<font size="-1">
+<a href="#features">Features</a>
+|
+<a href="#installation">Installation</a>
+|
+<a href="#usage">Usage</a>
+|
+<a href="#jar">JAR Usage File</a>
+|
+<a href="#problems">Problems</a>
+|
+<a href="#source">Source</a>
+|
+<a href="#support">Support</a>
+|
+<a href="#license">License</a>
+</font>
+</center>
+<hr size=0>
+<center>
+<a href="programmingGuide.html"><b>Programming Guide</b></a>
+</center>
+<hr size=0>
+
+<p>
+
+The CS Email Package is a set of java classes that makes it easy to
+send email from any Java application, applet or servlet.
+
+<p>
+
+<b><a name="features">Features</a></b>
+<ul>
+	<li>Uses SMTP to send email.
+	<li>API modeled after JavaMail
+	<li>Supports CC, BCC
+	<li>Supports Reply-To
+	<li>Packaged with programming guide (API description)
+</ul>
+
+<p>
+
+<b><a name="installation">Installation</a></b>
+<ul>
+To install the Email Package, simply copy the classes 
+(found in the <font color="#006600"><code>distribution</code></font>
+ directory) into the correct directory.
+For instance, if your app is the in the directory <font color="#006600"><code>yourCurrentDirectory</code></font>, the
+directories should be setup in the following way:
+<pre>yourCurrentDirectory/ ExampleApp.java
+                    / com /
+                          / coolservlets /
+                                         / email /
+                                                 / &lt;email classes&gt;
+</pre>
+where <code>&lt;email classes&gt;</code> are the .class files included in the distribution. 
+</ul>
+
+<p>
+
+<b><a name="usage">Usage</a></b>
+<ul>
+Look in the <code><font color="#006600"><b>demo</b>/</font></code> directory of this 
+distribution (or view the <a href="EmailDemo.html">Demo</a> page) for sample uses of the servlet.
+
+<p>
+
+To include the classes in your Java program, just do:
+<ul>
+<code><font color="#006600">import com.coolservlets.email;</font></code>
+</ul>
+
+</ul>
+
+<p>
+
+<b><a name="jar">JAR Usage</a></b>
+<ul>
+A Java Archive (JAR) of the email classes is included in this distribution (see the
+<font color="#006600"><code>distribution</code></font> directory). To use it,
+add the JAR file <font color="#006600"><code>CSEmail.jar</code></font> to your 
+<code>CLASSPATH</code>. Then you will be able to add <code><font color="#006600">import com.coolservlets.email;</font></code>
+to your code.
+</ul>
+
+<p>
+
+<b><a name="problems">Problems?</a></b>
+<ul>
+We have made every effort to make this package easy to install and as robust as possible. If you are
+having problems making it work, first go back over the installation instructions and make sure you followed
+them exactly.
+Additional help can be found on <a href="http://www.coolservlets.com">http://www.coolservlets.com</a> 
+or the Email page (<a href="http://www.coolservlets.com/email/">http://www.coolservlets.com/Email/</a>) where
+FAQ's or discussion forums may exist for this servlet.
+<p>
+Bugs in the servlet can be reported to <a href="mailto:bugs@coolservlets.com">bugs@coolservlets.com</a>. You
+may also send descriptions of any other problems you are having with the servlet to that address, but we
+can't guarantee a reply due to our busy schedules.
+<p>
+If you require technical support, please see below for information about how to purchase it.
+</ul>
+
+<p>
+
+<b><a name="source">Source</a></b>
+<ul>
+The full source of the servlet be found in the <font color="#006600"><code>source</code></font>
+folder in this distribution. If you would like compile it, you'll need the Servlet SDK which is available
+on the Java website: <a href="http://java.sun.com">http://java.sun.com</a>.
+</ul>
+
+<p>
+
+<b><a name="support">Technical Support</a></b>
+<ul>
+Individuals or companies that would like technical support for this servlet can buy unlimited email
+tech support for $50. A support contract can also be purchased for $150 which provides 
+unlimited email tech support for all CoolServlets.com servlets. Please see 
+<a href="http://www.coolservlets.com/support">http://www.coolservlets.com/support</a> for further details.
+<p>
+Purchasing technical support guarantees a quick resolution to any problems you have with CoolServlets.com
+servlets. It is also a great way to aid the continued development of further high quality, free, open-source
+servlets.
+</ul>
+
+<p>
+
+<b><a name="license">License</a></b>
+<ul>
+This servlet is distributed under the GNU Library General Public License. This means that the 
+program is completely free (see below for legalese).
+
+<p>
+
+However, there are
+a few voluntary things that we would really appreciate: provide links back to CoolServlets.com instead
+of redistributing the code (this wguaranteentee that people will always be able to get the
+latest version), and send us bug reports or feature requests. Also, we encourage you
+to put the CoolServlets.com button somewhere on your site so that other people can find out about our
+free servlets. Please spread the word about CoolServlets.com!
+<p>
+<pre><font color="#666666">
+    Copyright (C) 1999  Matt Tucker, Bill Lynch
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU Library General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Library General Public License for more details.
+
+    You should have received a copy of the GNU Library General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+</font></pre> 
+
+<br><br>
+
+<!-- Begin Footer -->
+<center>
+<table cellpadding=0 cellspacing=0 width="60%" border=0>
+	<td bgcolor="#666666"><img src="images/dot.gif" width=1 height=1 border=0></td>
+</table>
+<font size="-1" color="#333333">
+Copyright &copy; CoolServlets.com 1999
+</font>
+</center>
+<!-- End Footer -->
+
+</body>
+</html>
