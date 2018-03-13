@@ -1,1 +1,0 @@
-<% } else response.sendError(response.SC_FORBIDDEN); %>
